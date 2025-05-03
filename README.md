@@ -105,4 +105,4 @@ uvicorn handler:app --reload
 
 ## 🧠 Credits
 
-Built by [Your Name] • Powered by FastAPI + Serverless + Plaid
+Built by [Sathya Musanipalli] • Powered by FastAPI + Serverless + Plaid
