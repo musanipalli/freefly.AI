@@ -1,0 +1,30 @@
+service: plaid-fastapi-lambda
+
+frameworkVersion: "~3.38.0"
+
+provider:
+  name: aws
+  runtime: python3.10
+  region: us-east-1
+  environment:
+    PLAID_CLIENT_ID: ${env:PLAID_CLIENT_ID}
+    PLAID_SECRET: ${env:PLAID_SECRET}
+    PLAID_ENV: sandbox
+
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - http:
+          path: /{proxy+}
+          method: any
+          cors: true
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    zip: true
+    slim: true
