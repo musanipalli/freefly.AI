@@ -1,2 +1,7 @@
 streamlit
 pandas
+fastapi
+uvicorn
+python-dotenv
+plaid2
+mangum
