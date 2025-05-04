@@ -18,7 +18,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Serverless Framework
-        run: npm install -g serverless
+        run:  npm install -g serverless@3.38.0
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
